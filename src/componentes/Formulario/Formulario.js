@@ -23,12 +23,20 @@ const Formulario = (props) => {
       foto,
       equipo
     }
+    alert("Colaborador creado");
     registrarColaborador(datosAEnviar);
+    actualizarNombre("");
+    actualizarPuesto("");
+    actualizarFoto("");
+    actualizarEquipo("");
   };
 
   const manejarNuevoEquipo = (e) => {
     e.preventDefault()
     crearEquipo({titulo,colorPrimario:color}) 
+    alert("Equipo creado");
+    actualizarTitulo("");
+    actualizarColor("");
     // se envia como un objeto, como se llaman igual se puede simplificar (titulo:titulo)
   }
   return (
